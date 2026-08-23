@@ -15,9 +15,12 @@ public:
         int high = max_val;
         while (low <= high) {
             long long mid = low + (high - low) / 2;
-            if (hours(piles,mid) <= h) high = mid-1;
-            else low = mid+1;
+            if (hours(piles, mid) <= h)
+                high = mid - 1;
+            else
+                low = mid + 1;
         }
         return low;
     }
 };
+// working
