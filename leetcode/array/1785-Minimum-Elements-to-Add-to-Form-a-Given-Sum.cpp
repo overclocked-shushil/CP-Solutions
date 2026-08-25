@@ -5,6 +5,6 @@ public:
         for (int i = 0;i<nums.size();i++){
             sum+= nums[i];
         }
-        return (abs(sum-goal)+limit -1)/limit;
+        return (llabs(sum-goal)+limit -1)/limit;
     }
 };
