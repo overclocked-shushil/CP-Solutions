@@ -3,7 +3,7 @@ public:
     bool divide(vector<int>& nums, int mid, int threshold) {
         int sum = 0;
         for (int i = 0; i < nums.size(); i++) {
-            sum += (nums[i] + mid - 1) / mid;
+            sum += ceil(static_cast<double>(nums[i])/mid);
         }
         if (sum <= threshold)return true;
         else return false;
