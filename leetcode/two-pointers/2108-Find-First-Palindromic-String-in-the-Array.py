@@ -1,9 +1,12 @@
-class Solution(object):
-    def isPalindrome(self, s):
-        return s == s[::-1]
-
-    def firstPalindrome(self, words):
-        for word in words:
-            if self.isPalindrome(word):
-                return word
+class Solution:
+    def check(self,s):
+        if (s == s[::-1]) :
+            return True
+        else:
+            return False
+    def firstPalindrome(self, words: List[str]) -> str:
+        for i in range (len(words)):
+            if (self.check(words[i]) == True):
+                return words[i]
+            
         return ""
