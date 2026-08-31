@@ -10,13 +10,12 @@ public:
         return sum;
     }
     int minElement(vector<int>& nums) {
-        for (auto &n : nums){
+        int mini = INT_MAX;
+        for (auto n : nums){
             n = digitsum(n);
+            mini = min(mini,n);
         }
-       int mini = INT_MAX;
-       for (auto n : nums){
-        mini = min(mini,n);
-       } 
+       
        return mini;
     }
 };
