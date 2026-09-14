@@ -9,7 +9,7 @@ public:
                 count++;
                 brek = true;
             }
-            else if(brek == true) break;
+            else if(brek) break;
         }
         return count;
     }
