@@ -7,7 +7,7 @@ public:
                 reverse(ans.begin(), ans.begin() + i);
             ans += s[i];
         }
-        ans.erase(std::remove(ans.begin(), ans.end(), 'i'), ans.end());
+        ans.erase(remove(ans.begin(), ans.end(), 'i'), ans.end());
         return ans;
     }
 };
