@@ -11,6 +11,5 @@ int main() {
         cout << n-min({a,b,c}) << '\n';
         
     }
-    
     return 0;
 }
