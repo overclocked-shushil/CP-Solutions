@@ -6,20 +6,15 @@ public:
         for (int i = 0; i < n; i++) {
             if (i == 0 || s[i - 1] == ' ') {
                 int j = i;
-
                 while (j < n && s[j] != ' ')
                     j++;
-
                 int len = j - i;
-
                 if (len >= 3) {
                     s[i] = toupper(s[i]);
                 }
-
                 i = j - 1;
             }
         }
-
         return s;
     }
 };
