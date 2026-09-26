@@ -1,9 +1,9 @@
 class Solution {
 public:
     string evaluate(string s, vector<vector<string>>& knowledge) {
-        unordered_map<string, string> dict;
+        unordered_map<string, string> mpp;
         for (auto& k : knowledge) {
-            dict[k[0]] = k[1];
+            mpp[k[0]] = k[1];
         }
         bool addKey = false;
         string key;
@@ -12,11 +12,10 @@ public:
             if (c == '(')
                 addKey = true;
             else if (c == ')') {
-                if (dict.count(key) > 0)
-                    res += dict[key];
+                if (mpp.count(key) > 0)
+                    res += mpp[key];
                 else
                     res.push_back('?');
-
                 addKey = false;
                 key = "";
             } else if (addKey)
