@@ -7,7 +7,6 @@ public:
             if (c == '(') {
                 st.push(c);
             }
-
             else if (c == ')') {
                 if (st.empty()) 
                     ans++;
