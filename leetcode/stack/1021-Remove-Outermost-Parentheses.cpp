@@ -8,7 +8,8 @@ public:
                 if (balance > 0)
                     res += c;
                     balance++;
-            } else {
+            } 
+            else {
                 balance--;
                 if (balance > 0)
                     res += c;
