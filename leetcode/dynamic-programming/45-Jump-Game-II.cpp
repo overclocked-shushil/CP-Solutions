@@ -8,7 +8,7 @@ public:
         for (int i = 0;i<nums.size();i++){
             maxreach = max (maxreach,i+nums[i]);
             if (i == curr){
-                ++jumps;
+                jumps++;
                 curr = maxreach;
                 if (curr >= nums.size()-1) break;
             }
