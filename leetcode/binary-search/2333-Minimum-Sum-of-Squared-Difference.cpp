@@ -20,7 +20,7 @@ public:
             return sum <= k;
         };
         while (l <= r) {
-            int mid = (l + r) >> 1;
+            int mid = l + (r-l) /2;
             if (check(mid)) {
                 r = mid - 1;
                 res = mid;
