@@ -10,13 +10,12 @@ public:
         return rev;
     }
     int countDistinctIntegers(vector<int>& nums) {
-        vector<int> store = nums;
-        for (int i = 0; i < nums.size(); i++) {
-            store.push_back(reverse(nums[i]));
-        }
         set <int> ans;
-        for (int n : store ){
+        for (int n : nums ){
             ans.insert(n);
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            ans.insert(reverse(nums[i]));
         }
         return ans.size();
     }
