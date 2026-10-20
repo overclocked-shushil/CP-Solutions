@@ -1,25 +1,23 @@
 class Solution {
 public:
     bool isValid(string s) {
-        stack <char> st;
-        for (int i = 0;i<s.size();i++){
+        stack<char> st;
+        for (int i = 0; i < s.size(); i++) {
             st.push(s[i]);
-            if (st.size() >=3){
+            if (st.size() >= 3) {
                 char c = st.top();
                 st.pop();
                 char b = st.top();
                 st.pop();
                 char a = st.top();
                 st.pop();
-                if (a == 'a' && b == 'b' && c == 'c'){
+                if (a == 'a' && b == 'b' && c == 'c') {
 
-                }
-                else {
+                } else {
                     st.push(a);
                     st.push(b);
                     st.push(c);
                 }
-
             }
         }
         return st.empty();
