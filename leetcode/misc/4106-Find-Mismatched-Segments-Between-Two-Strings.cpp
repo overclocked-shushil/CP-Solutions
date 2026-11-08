@@ -13,9 +13,7 @@ public:
             while (i < n && s1[i]!= s2[i]){
                 i++;
             }
-            string a = s1.substr(start,i-start);
-            string b = s2.substr(start,i-start);
-            ans.push_back({a,b});
+            ans.push_back({s1.substr(start,i-start),s2.substr(start,i-start)});
         }
         return ans;
     }
