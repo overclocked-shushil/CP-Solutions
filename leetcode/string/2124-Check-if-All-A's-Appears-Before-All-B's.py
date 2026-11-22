@@ -1,7 +1,9 @@
-class Solution:
-    def checkString(self, s: str) -> bool:
-        store = s
-        sorted_store = "".join(sorted(store))
-        if s == sorted_store : return True
-        
-        return False
+class Solution {
+public:
+    bool checkString(string s) {
+        string x = s;
+        sort(s.begin(),s.end());
+        if (s == x) return true;
+        return false;
+    }
+};
